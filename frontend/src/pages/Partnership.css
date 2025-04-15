@@ -1,0 +1,278 @@
+/* Partnership screen styles */
+.partnership-screen {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .partnership-content {
+    padding-top: 80px; /* Space for fixed header */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 0; /* No shift for navigation */
+  }
+  
+  .partnership-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .account-frame {
+    width: 100%;
+    max-width: 674px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    background-color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .account-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .account-details p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .partnership-form {
+    width: 100%;
+    max-width: 674px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    background-color: transparent;
+  }
+  
+  .form-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+  }
+  
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .input-label {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #666;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .input-label.active {
+    top: -10px;
+    font-size: 12px;
+    color: #333;
+  }
+  
+  .input-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .input-field {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    padding: 0 40px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+  }
+  
+  .input-field.textarea {
+    height: 80px;
+    padding: 10px 40px;
+    resize: vertical;
+  }
+  
+  .input-field:focus {
+    border-bottom: 2px solid #572668;
+  }
+  
+  .submit-cta {
+    width: 100%;
+    max-width: 500px;
+    height: 53px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .submit-cta:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .partnership-content {
+      padding-top: 70px;
+    }
+  
+    .account-frame,
+    .partnership-form {
+      max-width: 500px;
+    }
+  
+    .input-group {
+      max-width: 400px;
+    }
+  
+    .submit-cta {
+      max-width: 400px;
+      height: 48px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .partnership-title {
+      font-size: 20px;
+    }
+  
+    .account-frame,
+    .partnership-form {
+      max-width: 400px;
+      padding: 15px;
+    }
+  
+    .account-title,
+    .form-title {
+      font-size: 16px;
+    }
+  
+    .account-details p {
+      font-size: 14px;
+    }
+  
+    .input-group {
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+  
+    .input-field {
+      height: 36px;
+      font-size: 14px;
+    }
+  
+    .input-field.textarea {
+      height: 60px;
+    }
+  
+    .input-label {
+      font-size: 14px;
+    }
+  
+    .input-label.active {
+      top: -8px;
+      font-size: 10px;
+    }
+  
+    .submit-cta {
+      max-width: 300px;
+      height: 45px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .partnership-content {
+      padding-top: 80px;
+      padding: 10px;
+    }
+  
+    .partnership-title {
+      font-size: 18px;
+    }
+  
+    .account-frame,
+    .partnership-form {
+      max-width: 100%;
+      padding: 10px;
+      border-radius: 12px;
+    }
+  
+    .account-title,
+    .form-title {
+      font-size: 14px;
+    }
+  
+    .account-details p {
+      font-size: 12px;
+    }
+  
+    .input-group {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .input-field {
+      height: 32px;
+      font-size: 12px;
+    }
+  
+    .input-field.textarea {
+      height: 50px;
+    }
+  
+    .input-icon {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .input-label {
+      left: 30px;
+      font-size: 12px;
+    }
+  
+    .input-label.active {
+      top: -6px;
+      font-size: 8px;
+    }
+  
+    .submit-cta {
+      max-width: 100%;
+      height: 40px;
+      font-size: 12px;
+    }
+  }

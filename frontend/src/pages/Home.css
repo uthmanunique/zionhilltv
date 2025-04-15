@@ -1,0 +1,210 @@
+/* src/pages/Home.css */
+.home-screen {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-content {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    width: 100%;
+    transition: padding-left 0.3s ease;
+  }
+  
+  .home-content.nav-open {
+    padding-left: 250px;
+  }
+  
+  /* Reelz Section */
+  .reelz {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    width: 100%;
+  }
+  
+  .reelz-head {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 20px 20px;
+  }
+  
+  .reelz-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .reelz-frame {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .reelz-image {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+  
+  .reelz-title {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0 0 0;
+    text-align: left;
+    line-height: 1.4;
+  }
+  
+  /* Other Sections */
+  .home-section {
+    padding: 40px 0;
+    width: 100%;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px 20px;
+    padding-right: 20px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .see-all-link {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #572668;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .see-all-arrow {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+  }
+  
+  .section-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .item-frame {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+  
+  .item-title {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0 0 0;
+    text-align: left;
+    line-height: 1.4;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1440px) {
+    .reelz-grid.nav-open,
+    .section-grid.nav-open {
+      padding-left: 270px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .reelz-grid,
+    .section-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-content {
+      padding-left: 0;
+    }
+  
+    .home-content.nav-open {
+      padding-left: 220px;
+    }
+  
+    .reelz-head {
+      font-size: 20px;
+      margin-left: 20px;
+    }
+  
+    .reelz-grid,
+    .section-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .reelz-image {
+      height: 330px;
+    }
+  
+    .item-image {
+      height: 165px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .home-content.nav-open {
+      padding-left: 195px;
+    }
+  
+    .reelz-head {
+      font-size: 18px;
+      margin-left: 15px;
+    }
+  
+    .reelz-grid,
+    .section-grid {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  
+    .reelz-image {
+      height: 270px;
+    }
+  
+    .item-image {
+      height: 120px;
+    }
+  
+    .item-title {
+      font-size: 12px;
+    }
+  }

@@ -1,0 +1,436 @@
+/* Header styles - Responsive across all screen sizes */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #572668;
+    padding: 10px 20px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    box-sizing: border-box;
+  }
+  
+  /* Left section: Hamburger and Logo */
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .hamburger-icon {
+    height: 25px;
+    width: 25px;
+  }
+  
+  /* Logo styling */
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Center section: Search bar */
+  .header-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-bar {
+    position: relative;
+    width: 550px;
+    height: 36px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    width: calc(100% - 40px);
+    height: 100%;
+    font-size: 14px;
+    padding: 0 10px 0 15px;
+    background: transparent;
+  }
+  
+  .search-icon {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .search-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Right section: Sign In CTA and Profile */
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .signin-link {
+    text-decoration: none;
+  }
+  
+  .signin-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100px;
+    height: 36px;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    padding: 0 10px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .signin-btn:hover {
+    background-color: #e0e0e0;
+    color: #572668;
+  }
+  
+  .signin-icon {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .profile-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Profile button */
+  .profile-btn {
+    width: 40px; /* Fixed size for the frame */
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden; /* Ensures image stays within bounds */
+    border: 2px solid #572668; /* Consistent with Profile.css */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .profile-btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Profile image in the button */
+  .profile-pic {
+    width: 100%; /* Fits the container */
+    height: 100%;
+    object-fit: cover; /* Ensures image scales and crops properly */
+    border-radius: 50%; /* Keeps it circular */
+  }
+  
+  /* Fallback moniker when no image */
+  .profile-moniker {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #572668;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Dropdown overlay */
+  .profile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  
+  /* Dropdown menu */
+  .profile-dropdown {
+    position: absolute;
+    top: 50px; /* Adjust based on header height */
+    right: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    z-index: 2000;
+    padding: 10px;
+  }
+  
+  /* Profile header in dropdown */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .profile-header-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  
+  .profile-header:hover {
+    background-color: #f5f5f5; /* Hover effect */
+  }
+  
+  /* Profile image in dropdown */
+  .dropdown-profile-pic {
+    width: 50px; /* Smaller size for dropdown */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; /* Fits properly */
+    margin-right: 10px;
+    border: 2px solid #572668;
+  }
+  
+  /* Dropdown username */
+  .dropdown-info {
+    flex-grow: 1;
+  }
+  
+  .dropdown-username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+  }
+  
+  
+  /* Dropdown items */
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .dropdown-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .dropdown-item span {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Divider */
+  .dropdown-divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 5px 0;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      padding: 10px;
+      height: 70px;
+    }
+  
+    .search-bar {
+      width: 100%;
+      max-width: 350px;
+      height: 32px;
+    }
+  
+    .search-input {
+      width: calc(100% - 38px);
+      font-size: 13px;
+    }
+  
+    .search-icon {
+      height: 18px;
+      width: 18px;
+    }
+  
+    .signin-btn {
+      width: 90px;
+      height: 32px;
+      font-size: 13px;
+    }
+  
+    .signin-icon {
+      height: 18px;
+      width: 18px;
+    }
+  
+    .profile-btn {
+      width: 36px;
+      height: 36px;
+    }
+  
+    .profile-moniker {
+      font-size: 16px;
+    }
+  
+    .logo {
+      height: 40px;
+    }
+  
+    .hamburger-icon {
+      height: 22px;
+      width: 22px;
+    }
+  
+    .profile-dropdown {
+      width: 200px;
+      top: 45px;
+    }
+  
+    .dropdown-profile-pic {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .dropdown-username {
+      font-size: 14px;
+    }
+  
+    .dropdown-item span {
+      font-size: 13px;
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .header {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 5px;
+    }
+  
+    .header-left {
+      gap: 10px;
+    }
+  
+    .header-center {
+      order: 2;
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .search-bar {
+      width: 100%;
+      max-width: none;
+      height: 30px;
+    }
+  
+    .search-input {
+      width: calc(100% - 36px);
+      font-size: 12px;
+    }
+  
+    .search-icon {
+      height: 16px;
+      width: 16px;
+    }
+  
+    .header-right {
+      order: 1;
+    }
+  
+    .signin-btn {
+      width: 80px;
+      height: 30px;
+      font-size: 12px;
+    }
+  
+    .signin-icon {
+      height: 16px;
+      width: 16px;
+    }
+  
+    .profile-btn {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .profile-moniker {
+      font-size: 14px;
+    }
+  
+    .hamburger-icon {
+      height: 20px;
+      width: 20px;
+    }
+  
+    .profile-dropdown {
+      width: 180px;
+      top: 40px;
+    }
+  
+    .dropdown-profile-pic {
+      width: 36px;
+      height: 36px;
+    }
+  
+    .dropdown-username {
+      font-size: 12px;
+    }
+  
+    .dropdown-item {
+      font-size: 12px;
+      padding: 6px 0;
+    }
+  
+    .dropdown-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }

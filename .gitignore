@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+*.log
+.env
+dist/
+build/
+
+# Frontend-specific (if React or similar)
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+
+# Backend-specific
+backend/node_modules/
+backend/.env
+
+# IDE files
+.vscode/
+.idea/
