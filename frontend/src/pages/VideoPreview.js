@@ -223,8 +223,8 @@ const VideoPreview = () => {
         <div className="video-player-wrapper">
           <video
             ref={videoRef}
-            src={`http://localhost:5000${video.url}`}
-            poster={`http://localhost:5000${video.image}`}
+            src={`https://zionhilltv.onrender.com${video.url}`}
+            poster={`https://zionhilltv.onrender.com${video.image}`}
             className="video-player"
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
@@ -337,7 +337,7 @@ const VideoPreview = () => {
               className="related-video-item"
             >
               <div className="related-thumbnail">
-                <img src={`http://localhost:5000${related.image}`} alt={related.title} />
+                <img src={`https://zionhilltv.onrender.com${related.image}`} alt={related.title} />
               </div>
               <div className="related-info">
                 <h3 className="related-title">{related.title}</h3>

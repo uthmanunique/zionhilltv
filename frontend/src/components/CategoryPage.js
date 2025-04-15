@@ -75,7 +75,7 @@ const CategoryPage = () => {
               {items.map(item => (
                 <Link to={`/video/${item._id}`} key={item._id} className="item-frame">
                   <img
-                    src={item.image ? `http://localhost:5000${item.image}` : 'https://via.placeholder.com/400x220'}
+                    src={item.image ? `https://zionhilltv.onrender.com${item.image}` : 'https://via.placeholder.com/400x220'}
                     alt={item.title}
                     className="item-image"
                     style={{

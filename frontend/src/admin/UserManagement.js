@@ -27,7 +27,7 @@ const UserManagement = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/api/admin/users', {
+        const { data } = await axios.get('https://zionhilltv.onrender.com/api/admin/users', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setUsers(data);
@@ -40,7 +40,7 @@ const UserManagement = () => {
 
   const handleStatusChange = async (id, status) => {
     try {
-      const { data } = await axios.patch(`http://localhost:5000/api/admin/users/${id}`, { status }, {
+      const { data } = await axios.patch(`https://zionhilltv.onrender.com/api/admin/users/${id}`, { status }, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setUsers(users.map(u => u._id === id ? data : u));

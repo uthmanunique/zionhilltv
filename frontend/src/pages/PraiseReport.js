@@ -30,7 +30,7 @@ const PraiseReport = () => {
       try {
         const { data } = await api.get('/praise-report');
         setPraiseReports(data.map(report => ({
-          media: `http://localhost:5000${report.media}`, // Adjust base URL as needed
+          media: `https://zionhilltv.onrender.com${report.media}`, // Adjust base URL as needed
           title: report.report.substring(0, 20) + '...', // Shortened title
         })));
       } catch (err) {
@@ -58,7 +58,7 @@ const PraiseReport = () => {
       setMedia(null);
       setReport('');
       setPraiseReports([...praiseReports, {
-        media: `http://localhost:5000${data.praiseReport.media}`,
+        media: `https://zionhilltv.onrender.com${data.praiseReport.media}`,
         title: data.praiseReport.report.substring(0, 20) + '...',
       }]);
     } catch (err) {

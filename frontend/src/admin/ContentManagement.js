@@ -29,7 +29,7 @@ const ContentManagement = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/api/admin/videos', {
+        const { data } = await axios.get('https://zionhilltv.onrender.com/api/admin/videos', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         console.log('Fetched videos:', data); // Already present
@@ -46,7 +46,7 @@ const ContentManagement = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admin/videos/${id}`, {
+      await axios.delete(`https://zionhilltv.onrender.com/api/admin/videos/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setVideos(videos.filter(v => v.id !== id));
@@ -58,7 +58,7 @@ const ContentManagement = () => {
 
   const handleQueueAction = async (id, action) => {
     try {
-      await axios.patch(`http://localhost:5000/api/admin/videos/${id}`, { status: action }, {
+      await axios.patch(`https://zionhilltv.onrender.com/api/admin/videos/${id}`, { status: action }, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setQueue(queue.map(q => q._id === id ? { ...q, status: action } : q));
@@ -141,7 +141,7 @@ const ContentManagement = () => {
                     {activeTab === 'All Videos' ? (
                       <>
                         <td>{item.title}</td>
-                        <td><img src={`http://localhost:5000${item.image}`} alt={item.title} className="video-thumbnail" /></td>
+                        <td><img src={`https://zionhilltv.onrender.com${item.image}`} alt={item.title} className="video-thumbnail" /></td>
                         <td>{item.visibility}</td>
                         <td>{item.restrictions || 'none'}</td>
                         <td>{new Date(item.createdAt).toLocaleDateString()}</td>

@@ -30,10 +30,10 @@ const CommentReaction = () => {
     const fetchData = async () => {
       try {
         const [commentsRes, reactionsRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/admin/comments', {
+          axios.get('https://zionhilltv.onrender.com/api/admin/comments', {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
           }),
-          axios.get('http://localhost:5000/api/admin/reactions', {
+          axios.get('https://zionhilltv.onrender.com/api/admin/reactions', {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
           }),
         ]);
@@ -48,7 +48,7 @@ const CommentReaction = () => {
 
   const handleDelete = async (id, type) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admin/${type}/${id}`, {
+      await axios.delete(`https://zionhilltv.onrender.com/api/admin/${type}/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       if (type === 'comments') setComments(comments.filter(c => c._id !== id));

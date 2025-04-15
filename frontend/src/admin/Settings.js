@@ -30,7 +30,7 @@ const Settings = () => {
   useEffect(() => {
     const fetchSettings = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/api/admin/settings', {
+        const { data } = await axios.get('https://zionhilltv.onrender.com/api/admin/settings', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setGeneralSettings({
@@ -53,7 +53,7 @@ const Settings = () => {
 
     const fetchAuditLog = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/api/admin/analytics', {
+        const { data } = await axios.get('https://zionhilltv.onrender.com/api/admin/analytics', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setAuditLog(data.recentActivity.map(a => ({
@@ -97,7 +97,7 @@ const Settings = () => {
 
   const handleSave = async () => {
     try {
-      await axios.patch('http://localhost:5000/api/admin/settings', {
+      await axios.patch('https://zionhilltv.onrender.com/api/admin/settings', {
         ...generalSettings,
         ...moderationSettings,
         ...appearanceSettings,

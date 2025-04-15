@@ -75,7 +75,7 @@ const Home = () => {
               sections.reelz.map(reel => (
                 <Link to={`/video/${reel._id}`} key={reel._id} className="reelz-frame">
                   <img
-                    src={reel.image ? `http://localhost:5000${reel.image}` : 'https://via.placeholder.com/220x400'}
+                    src={reel.image ? `https://zionhilltv.onrender.com${reel.image}` : 'https://via.placeholder.com/220x400'}
                     alt={reel.title}
                     className="reelz-image"
                     style={{
@@ -114,7 +114,7 @@ const Home = () => {
                   items.map(item => (
                     <Link to={`/video/${item._id}`} key={item._id} className="item-frame">
                       <img
-                        src={item.image ? `http://localhost:5000${item.image}` : 'https://via.placeholder.com/400x220'}
+                        src={item.image ? `https://zionhilltv.onrender.com${item.image}` : 'https://via.placeholder.com/400x220'}
                         alt={item.title}
                         className="item-image"
                         style={{

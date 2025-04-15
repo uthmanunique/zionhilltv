@@ -54,11 +54,11 @@ const ReviewVideo = () => {
           <p><strong>Tags:</strong> {video.tags?.join(', ') || 'None'}</p>
           
           {video.image && (
-            <img src={`http://localhost:5000${video.image}`} alt="Thumbnail" className="thumbnail-preview" />
+            <img src={`https://zionhilltv.onrender.com${video.image}`} alt="Thumbnail" className="thumbnail-preview" />
           )}
           {video.url && ( // Changed from videoUrl to url
             <video controls className="video-preview">
-              <source src={`http://localhost:5000${video.url}`} type="video/mp4" />
+              <source src={`https://zionhilltv.onrender.com${video.url}`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           )}
