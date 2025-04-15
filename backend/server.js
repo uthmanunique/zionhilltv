@@ -11,8 +11,22 @@ const praiseReportRoutes = require('./routes/praise-report');
 
 const app = express();
 
-// Middleware
-app.use(cors({ origin: 'http://localhost:3000' })); // Update later for deployed frontend if needed
+// Allow localhost for local dev and Netlify for production
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:3001',
+  'https://zionhilltv.onrender.com',
+  'https://zionhill.netlify.app'
+];
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 
